@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 03 </title>
+    <script>
+        var numero = prompt("Digite um número positivo e inteiro: ")
+        var fatorial = 1
+        if (isNaN(numero) || numero < 0) {
+            alert("Número inválido!")
+        } else {
+            for (var contador = 1; contador <= numero; contador++) {
+                fatorial = fatorial * contador
+            }
+
+            alert("O fatorial de " + numero + " resulta no valor: " + fatorial)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

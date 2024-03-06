@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 04 </title>
+    <script>
+        var dado = prompt("Digite um dado: ")
+
+        if (confirm("Deseja verificar o tipo do dado?")) {
+            if (dado == "") {
+                alert("Dado inválido.")
+            } else if (parseFloat(dado)) {
+                alert("Number.")
+            } else {
+                alert("String.")
+            }
+        } else {
+            alert("Obrigado por visitar está página!")
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercicio 01</title>
-  </head>
-  <body>
-    <h2>Adicione um novo valor:</h2>
-    <form id="formulario">
-      <label for="valor">Valor: </label>
-      <input type="text" id="valor" name="valor" required />
-      <button type="button" onclick="adicionarValor()"> Adicionar Valor </button>
-    </form>
 
-    <br><br>
-    <h2>Dados Registrados</h2>
-    <ol id="listarDados"></ol>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 01 </title>
+    <script>
+        var numero = prompt("Digite um número inteiro e positivo: ")
+        var divisiveis = 0
 
-    <script src="./exercicio_01.js"></script>
-  </body>
+        if (isNaN(numero) || numero < 0) {
+            alert("Número inválido! ")
+        } else {
+            if (numero % 2 == 0) {
+                alert("O número é par!")
+            } else {
+                alert("O número é impar!")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
 </html>

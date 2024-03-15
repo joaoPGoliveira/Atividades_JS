@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 02</title>
+    <script>
+      let numero = prompt("Digite um número inteiro e positivo: ");
+      let divisiveis = 0;
+
+      if (numero === "") {
+        alert(
+          "[ERRO]. Campo em branco, por favor, recarregue a página e insira um valor."
+        );
+      } else {
+        if (isNaN(numero) || numero < 0) {
+          alert("Número inválido! ");
+        } else {
+          for (let contador = 1; contador <= numero; contador++) {
+            if (numero % contador == 0) {
+              divisiveis++;
+            }
+          }
+          if (divisiveis == 2) {
+            alert("É primo!");
+          } else {
+            alert("Não é primo!");
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Fim do script.</h1>
+    <a href="../index.html"> Voltar </a>
+  </body>
+</html>

@@ -21,7 +21,7 @@
       let dados = [];
 
       function adicionarValor() {
-        const novoValor = document.getElementById("valor").value.trim();
+        let novoValor = document.getElementById("valor").value.trim();
 
         if (novoValor !== "") {
           dados.push(novoValor);
@@ -33,13 +33,13 @@
       }
 
       function mostrarDados() {
-        const listaDados = document.getElementById("listarDados");
+        let listaDados = document.getElementById("listarDados");
         listaDados.innerHTML = "";
 
         dados.sort();
 
         dados.forEach((valor) => {
-          const itemLista = document.createElement("li");
+          let itemLista = document.createElement("li");
           itemLista.textContent = valor;
           listaDados.appendChild(itemLista);
         });

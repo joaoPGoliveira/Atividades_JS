@@ -42,13 +42,14 @@ div_principal.style.cssText = "width: 50%; border: 3px solid black; margin: auto
         var botao_positivo_homem = document.createElement("img");
         config_botoes_homem.appendChild(botao_positivo_homem);
         botao_positivo_homem.src = "../Images/mais.png";
-        botao_positivo_homem.style.cssText = "width: 150px; margin: 0 2% 0 3%";
-        botao_positivo_homem.setAttribute("onclick", "AdicionarHomem()");    
+        botao_positivo_homem.style.cssText = "width: 150px; margin: 0 2% 0 3%; cursor: pointer";
+        botao_positivo_homem.setAttribute("onclick", "adicionarHomem()");    
 
         var botao_negativo_homem = document.createElement("img");
         config_botoes_homem.appendChild(botao_negativo_homem);
         botao_negativo_homem.src = "../Images/menos.png";
-        botao_negativo_homem.style.cssText = "width: 115px";
+        botao_negativo_homem.style.cssText = "width: 115px; cursor: pointer";
+        botao_negativo_homem.setAttribute("onclick", "removerHomem()");
 
         var titulo_homem = document.createElement("h1");
         div_homem.appendChild(titulo_homem);
@@ -81,12 +82,14 @@ div_principal.style.cssText = "width: 50%; border: 3px solid black; margin: auto
         var botao_positivo_mulher = document.createElement("img");
         config_botoes_mulher.appendChild(botao_positivo_mulher);
         botao_positivo_mulher.src = "../Images/mais.png";
-        botao_positivo_mulher.style.cssText = "width: 150px; margin: 0 2% 0 3%";
-        
+        botao_positivo_mulher.style.cssText = "width: 150px; margin: 0 2% 0 3%; cursor: pointer";
+        botao_positivo_mulher.setAttribute("onclick", "adicionarMulher()");
+
         var botao_negativo_mulher = document.createElement("img");
         config_botoes_mulher.appendChild(botao_negativo_mulher);
         botao_negativo_mulher.src = "../Images/menos.png";
-        botao_negativo_mulher.style.cssText = "width: 100px";
+        botao_negativo_mulher.style.cssText = "width: 100px; cursor: pointer";
+        botao_negativo_mulher.setAttribute("onclick", "removerMulher()");
 
         var titulo_mulher = document.createElement("h1");
         div_mulher.appendChild(titulo_mulher);
@@ -105,18 +108,68 @@ div_principal.style.cssText = "width: 50%; border: 3px solid black; margin: auto
     var botao_reload = document.createElement("img");
     div_principal.appendChild(botao_reload);
     botao_reload.src = "../Images/recarregar.png";
-    botao_reload.style.cssText = "width: 100px; display:block; margin: 10% auto 0 auto";
+    botao_reload.style.cssText = "width: 100px; display:block; margin: 10% auto 0 auto; cursor: pointer";
+    botao_reload.setAttribute("onclick", "resetar()");
 
     var titulo_botao_reset = document.createElement("h1");
     div_principal.appendChild(titulo_botao_reset);
     titulo_botao_reset.innerHTML = "Reset"
     titulo_botao_reset.style.cssText = "text-align: center";
 
-/* Funções dos botões */
+/* Funções e variaveis dos botões */
 
-function AdicionarHomem() {
-    total_pessoas += 1;
-    total_homem += 1;
-    total_pessoas.innerHTML = total_pessoas;
-    total_homem.innerHTML = total_pessoas;
+var totH = 0;
+var totP = 0;
+var totM = 0;
+
+function adicionarHomem() {
+    totH += 1
+    totP += 1
+    
+    total_pessoas.innerHTML = totP;
+    total_homem.innerHTML = totH;
+}
+
+function removerHomem() {
+    if (totH == 0) {
+        totH = totH;
+        totP = totP;
+    } else {
+        totH -= 1;
+        totP -= 1;
+
+        total_pessoas.innerHTML = totP;
+        total_homem.innerHTML = totH;
+    }
+}
+
+function adicionarMulher() {
+    totM += 1
+    totP += 1
+    
+    total_pessoas.innerHTML = totP;
+    total_mulher.innerHTML = totM;
+}
+
+function removerMulher() {
+    if (totM == 0) {
+        totM = totM;
+        totP = totP;
+    } else {
+        totM -= 1;
+        totP -= 1;
+
+        total_pessoas.innerHTML = totP;
+        total_mulher.innerHTML = totM;
+    }
+}
+
+function resetar() {
+    totH = 0;
+    totP = 0;
+    totM = 0;
+
+    total_pessoas.innerHTML = totP;
+    total_homem.innerHTML = totH;
+    total_mulher.innerHTML = totM;
 }

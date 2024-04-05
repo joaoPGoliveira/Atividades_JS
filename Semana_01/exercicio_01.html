@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 01</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
     <script>
-      let numero = prompt("Digite um número inteiro e positivo: ");
+      var numero = prompt("Digite um número inteiro e positivo:");
 
       if (numero === "") {
         alert(
@@ -13,7 +18,7 @@
         );
       } else {
         if (isNaN(numero) || numero < 0) {
-          alert("Número inválido! ");
+          alert("[ERRO]. Número inválido!");
         } else {
           if (numero % 2 == 0) {
             alert("O número é par!");

@@ -4,25 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 01</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <h2>Adicione um novo valor:</h2>
     <form id="formulario">
       <label for="valor">Valor: </label>
       <input type="text" id="valor" name="valor" required />
-      <button type="button" onclick="adicionarValor()">Adicionar Valor</button><br><br>
+      <button type="button" onclick="adicionarValor()">Adicionar Valor</button
+      ><br /><br />
       <a href="../index.html"> Voltar </a>
     </form>
 
     <br /><br />
     <h2>Dados Registrados</h2>
-    <ol id="listarDados"></ol>
+    <ul id="listarDados"></ul>
 
     <script>
-      let dados = [];
+      var dados = [];
 
       function adicionarValor() {
-        let novoValor = document.getElementById("valor").value.trim();
+        var novoValor = document.getElementById("valor").value.trim();
 
         if (novoValor !== "") {
           dados.push(novoValor);
@@ -34,13 +40,13 @@
       }
 
       function mostrarDados() {
-        let listaDados = document.getElementById("listarDados");
+        var listaDados = document.getElementById("listarDados");
         listaDados.innerHTML = "";
 
         dados.sort();
 
         dados.forEach((valor) => {
-          let itemLista = document.createElement("li");
+          var itemLista = document.createElement("li");
           itemLista.textContent = valor;
           listaDados.appendChild(itemLista);
         });

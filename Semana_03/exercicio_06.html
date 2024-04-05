@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 06</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <h1> Fim dos script. </h1>
     <a href="../index.html"> Voltar </a>
     <script>
-        let data = new Date
-        let dia = data.getDate()
-        let dia_semana = data.getDay()
-        let mes = data.getMonth()
-        let ano = data.getYear()
+        var data = new Date
+        var dia = data.getDate()
+        var dia_semana = data.getDay()
+        var mes = data.getMonth()
+        var ano = data.getYear()
 
-        let diaExtenso = [
+        var diaExtenso = [
             "Domingo",
             "Segunda-Feira",
             "Terça-Feira",
@@ -25,7 +30,7 @@
             "Sábado"
         ]
 
-        let mesExtenso = [
+        var mesExtenso = [
             "Janeiro",
             "Fevereiro",
             "Março",

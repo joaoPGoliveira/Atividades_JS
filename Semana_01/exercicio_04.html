@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 04</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
     <script>
-      let dado = prompt("Digite um dado: ");
+      var dado = prompt("Digite um dado:");
 
       if (dado === "") {
         alert(
@@ -14,7 +19,7 @@
       } else {
         if (confirm("Deseja verificar o tipo do dado?")) {
           if (dado == "") {
-            alert("Dado inválido.");
+            alert("[ERRO]. Dado inválido.");
           } else if (parseFloat(dado)) {
             alert("Number.");
           } else {

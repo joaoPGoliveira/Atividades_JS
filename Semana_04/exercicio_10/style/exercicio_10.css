@@ -4,38 +4,33 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
-    background-color: #D3D3D3;
-    width: 45%;
-    margin: 5% auto 2% auto;
+h1 {
     text-align: center;
-    padding: 2%;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px black;
+    margin-bottom: 2rem;
 }
 
-h1 {
-    font-size: 50px;
-    margin-bottom: 5%;
+form {
+    border: 2px solid black;
+    padding: 2%;
+    width: 30%;
+    margin: 2rem auto 0 auto;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
 }
 
 label {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 input {
-    margin: 2% 0 2% 0;
-    width: 75%;
-    padding: 1%;
+    padding: 1.5%;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 button {
-    width: 30%;
+    margin-top: 1rem;
+    font-size: 20px;
     padding: 2%;
-    margin-top: 5%;
     border-radius: 10px;
-    font-size: 25px;
 }
